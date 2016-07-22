@@ -1,0 +1,6 @@
+/vendor
+
+/composer.lock
+
+/phpspec.yml.dist
+/behat.yml.dist
