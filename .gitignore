@@ -1,6 +1,4 @@
 /vendor
 
-/composer.lock
-
-/phpspec.yml.dist
 /behat.yml.dist
+/composer.lock

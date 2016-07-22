@@ -29,3 +29,5 @@ install:
 
 script:
     - composer validate --strict
+
+    - vendor/bin/behat --strict
