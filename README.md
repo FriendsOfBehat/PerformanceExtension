@@ -8,19 +8,19 @@ Accelerates Behat using features available only for newer PHP versions. Up to 10
 ## Usage
 
 1. Install it:
-
-```bash
-$ composer require friends-of-behat/performance-extension --dev
-```
+    
+    ```bash
+    $ composer require friends-of-behat/performance-extension --dev
+    ```
 
 2. Enable it in your Behat configuration:
-
-```yaml
-default:
-    # ...
-    extensions:
-        FriendsOfBehat\PerformanceExtension: ~
-```
+    
+    ```yaml
+    default:
+        # ...
+        extensions:
+            FriendsOfBehat\PerformanceExtension: ~
+    ```
 
 3. Boom! :boom: Your Behat runs faster now!
 
