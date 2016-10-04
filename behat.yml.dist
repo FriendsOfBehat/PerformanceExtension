@@ -1,3 +1,5 @@
 default:
-    extensions:
-        FriendsOfBehat\PerformanceExtension: ~
+    suites:
+        default:
+            contexts:
+                - FriendsOfBehat\TestContext\Context\TestContext
