@@ -16,6 +16,7 @@ Accelerates Behat using features available only for newer PHP versions. Up to 10
 2. Enable it in your Behat configuration:
     
     ```yaml
+    # behat.yml
     default:
         # ...
         extensions:
