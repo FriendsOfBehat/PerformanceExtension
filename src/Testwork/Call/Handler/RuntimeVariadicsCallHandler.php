@@ -21,8 +21,6 @@ use Behat\Testwork\Call\Handler\RuntimeCallHandler;
  * Replaces `call_user_func_array($callable, $arguments)` with `$callable(...$arguments)`.
  *
  * @see RuntimeCallHandler
- *
- * @author Kamil Kokot <kamil@kokot.me>
  */
 final class RuntimeVariadicsCallHandler implements CallHandler
 {
