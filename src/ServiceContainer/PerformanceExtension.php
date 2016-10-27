@@ -35,7 +35,6 @@ final class PerformanceExtension implements Extension
      */
     public function initialize(ExtensionManager $extensionManager)
     {
-
     }
 
     /**
@@ -43,7 +42,6 @@ final class PerformanceExtension implements Extension
      */
     public function configure(ArrayNodeDefinition $builder)
     {
-
     }
 
     /**
