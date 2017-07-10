@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.0",
 
         "behat/behat": "^3.1"
     },
     "require-dev": {
-        "friends-of-behat/test-context": "^0.2.0"
+        "friends-of-behat/test-context": "^0.3"
     },
     "autoload": {
         "psr-4": { "FriendsOfBehat\\PerformanceExtension\\": "src/" }
