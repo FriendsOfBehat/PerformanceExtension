@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the PerformanceExtension package.
  *
@@ -45,7 +47,7 @@ final class RuntimeVariadicsCallHandler implements CallHandler
     /**
      * {@inheritdoc}
      */
-    public function supportsCall(Call $call)
+    public function supportsCall(Call $call): bool
     {
         return true;
     }
@@ -53,7 +55,7 @@ final class RuntimeVariadicsCallHandler implements CallHandler
     /**
      * {@inheritdoc}
      */
-    public function handleCall(Call $call)
+    public function handleCall(Call $call): CallResult
     {
         $this->startErrorAndOutputBuffering($call);
 
@@ -69,7 +71,7 @@ final class RuntimeVariadicsCallHandler implements CallHandler
      *
      * @return CallResult
      */
-    private function executeCall(Call $call)
+    private function executeCall(Call $call): CallResult
     {
         $callable = $call->getBoundCallable();
         $arguments = array_values($call->getArguments());
@@ -90,7 +92,7 @@ final class RuntimeVariadicsCallHandler implements CallHandler
     /**
      * @return string|null
      */
-    private function getBufferedStdOut()
+    private function getBufferedStdOut(): ?string
     {
         return ob_get_length() ? ob_get_contents() : null;
     }
@@ -98,7 +100,7 @@ final class RuntimeVariadicsCallHandler implements CallHandler
     /**
      * @param Call $call
      */
-    private function startErrorAndOutputBuffering(Call $call)
+    private function startErrorAndOutputBuffering(Call $call): void
     {
         $errorHandler = function ($level, $message, $file, $line) {
             if ($this->errorLevelIsNotReportable($level)) {
@@ -114,7 +116,7 @@ final class RuntimeVariadicsCallHandler implements CallHandler
         $this->obStarted = ob_start();
     }
 
-    private function stopErrorAndOutputBuffering()
+    private function stopErrorAndOutputBuffering(): void
     {
         restore_error_handler();
 
@@ -128,7 +130,7 @@ final class RuntimeVariadicsCallHandler implements CallHandler
      *
      * @return bool
      */
-    private function errorLevelIsNotReportable($level)
+    private function errorLevelIsNotReportable(int $level): bool
     {
         return !(error_reporting() & $level);
     }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the PerformanceExtension package.
  *
@@ -25,7 +27,7 @@ final class PerformanceExtension implements Extension
     /**
      * {@inheritdoc}
      */
-    public function getConfigKey()
+    public function getConfigKey(): string
     {
         return 'fob_performance';
     }
@@ -33,21 +35,21 @@ final class PerformanceExtension implements Extension
     /**
      * {@inheritdoc}
      */
-    public function initialize(ExtensionManager $extensionManager)
+    public function initialize(ExtensionManager $extensionManager): void
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function configure(ArrayNodeDefinition $builder)
+    public function configure(ArrayNodeDefinition $builder): void
     {
     }
 
     /**
      * {@inheritdoc}
      */
-    public function load(ContainerBuilder $container, array $config)
+    public function load(ContainerBuilder $container, array $config): void
     {
         $definition = new Definition(RuntimeVariadicsCallHandler::class, [E_ALL | E_STRICT]);
         $definition->addTag(CallExtension::CALL_HANDLER_TAG, ['priority' => 100]);
@@ -61,7 +63,7 @@ final class PerformanceExtension implements Extension
      *
      * {@inheritdoc}
      */
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         $errorReporting = $container->getDefinition(CallExtension::CALL_HANDLER_TAG . '.runtime')->getArgument(0);
 
