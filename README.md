@@ -1,4 +1,5 @@
 # Performance Extension [![License](https://img.shields.io/packagist/l/friends-of-behat/performance-extension.svg)](https://packagist.org/packages/friends-of-behat/performance-extension) [![Version](https://img.shields.io/packagist/v/friends-of-behat/performance-extension.svg)](https://packagist.org/packages/friends-of-behat/performance-extension) [![Build status on Linux](https://img.shields.io/travis/FriendsOfBehat/PerformanceExtension/master.svg)](http://travis-ci.org/FriendsOfBehat/PerformanceExtension) [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/FriendsOfBehat/PerformanceExtension.svg)](https://scrutinizer-ci.com/g/FriendsOfBehat/PerformanceExtension/)
+#### Suitable for PHP 5.6 only!
 ###### The simplest Behat extension you've ever used!
 
 Accelerates Behat using features available only for newer PHP versions. Up to 10% faster in real-world applications. 
